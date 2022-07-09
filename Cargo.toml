@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/backend"
+]
+
+[profile.dev]
+debug = 0

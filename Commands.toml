@@ -1,0 +1,3 @@
+[dev]
+frontend = {cmd="yarn dev",working_dir="crates/frontend"}
+backend = {cmd="cargo tauri dev",working_dir="crates/backend"}
