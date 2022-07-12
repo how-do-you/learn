@@ -2,23 +2,11 @@
     <v-app theme="dark">
         <v-navigation-drawer rail v-model="drawerLeft" location="left" permanent>
             <v-list class="pa-0">
-                <v-list-item @click="">
+                <v-list-item v-for="(item,i) in navbar" :key="'nb'+i" :to="item.to">
                     <v-list-item-avatar start>
-                        <v-icon icon="mdi-home"></v-icon>
+                        <v-icon :icon="item.icon"></v-icon>
                     </v-list-item-avatar>
-                    <v-list-item-title>Home</v-list-item-title>
-                </v-list-item>
-                <v-list-item @click="">
-                    <v-list-item-avatar start>
-                        <v-icon icon="mdi-book"></v-icon>
-                    </v-list-item-avatar>
-                    <v-list-item-title>Home</v-list-item-title>
-                </v-list-item>
-                <v-list-item @click="">
-                    <v-list-item-avatar start>
-                        <v-icon icon="mdi-sitemap"></v-icon>
-                    </v-list-item-avatar>
-                    <v-list-item-title>Home</v-list-item-title>
+                    <v-list-item-title> {{item.title}}</v-list-item-title>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -44,7 +32,24 @@ export default {
     data() {
         return {
             drawerLeft: false,
-            drawerRight: false
+            drawerRight: false,
+            navbar: [
+                {
+                    title:'Home',
+                    to:'/',
+                    icon:'mdi-home'
+                },
+                {
+                    title:'Courses',
+                    to:'tools/',
+                    icon:'mdi-book'
+                },
+                {
+                    title:'Tools',
+                    to:'tools/',
+                    icon:'mdi-hammer-wrench'
+                }
+            ]
         }
     }
 }
