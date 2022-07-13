@@ -1,5 +1,5 @@
 <template>
-    <v-row>
+    <v-row class="ma-2">
         <v-col v-for="i in 20" cols="4">
             <v-card>
                 <v-icon>mdi-home</v-icon>

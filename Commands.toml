@@ -1,3 +1,6 @@
+[setup]
+frontend = {cmd = "yarn", working_dir = "crates/frontend"}
+
 [dev]
-frontend = {cmd="yarn dev",working_dir="crates/frontend"}
-backend = {cmd="cargo tauri dev",working_dir="crates/backend"}
+backend = {cmd = "cargo tauri dev", working_dir = "crates/backend"}
+frontend = {cmd = "yarn dev", working_dir = "crates/frontend"}
