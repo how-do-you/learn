@@ -1,8 +1,8 @@
 {
   "build": {
-    "beforeBuildCommand": "",
+    "beforeBuildCommand": "cargo cmd build.frontend",
     "beforeDevCommand": "cargo cmd dev.frontend",
-    "devPath": "http://localhost:3000",
+    "devPath": "http://localhost:7365",
     "distDir": "../backend"
   },
   "package": {
@@ -15,7 +15,7 @@
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Education",
       "copyright": "",
       "deb": {
         "depends": []
@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "rs.how-do-you.learn",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

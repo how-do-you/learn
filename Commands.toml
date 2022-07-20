@@ -1,6 +1,10 @@
 [setup]
-frontend = {cmd = "yarn", working_dir = "crates/frontend"}
+frontend = { cmd = "yarn", working_dir = "crates/frontend" }
 
 [dev]
-backend = {cmd = "cargo tauri dev", working_dir = "crates/backend"}
-frontend = {cmd = "yarn dev", working_dir = "crates/frontend"}
+backend = { cmd = "cargo tauri dev", working_dir = "crates/backend" }
+frontend = { cmd = "yarn dev", working_dir = "crates/frontend" }
+
+[build]
+backend = { cmd = "cargo tauri build", working_dir = "crates/backend" }
+frontend = { cmd = "yarn build && yarn generate", working_dir = "crates/frontend" }

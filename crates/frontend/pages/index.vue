@@ -31,11 +31,11 @@ export default {
         return {
             model: 0,
             colors: [
-                'primary',
+                'orange',
                 'secondary',
                 'yellow darken-2',
                 'red',
-                'orange',
+                'primary',
             ],
         }
     }

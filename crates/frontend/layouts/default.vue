@@ -45,7 +45,7 @@
             <v-app-bar density="compact" height="71">
                 <v-app-bar-nav-icon @click="drawerLeft = !drawerLeft"></v-app-bar-nav-icon>
                 <v-spacer></v-spacer>
-                <v-text-field hide-details single-line variant="underlined" placeholder="Search" class="hdy-searchbar"
+                <v-text-field hide-details single-line variant="underlined" placeholder="How do you..." class="hdy-searchbar"
                     style="width:100%;max-width: 15cm;"></v-text-field>
                 <v-spacer></v-spacer>
 
@@ -56,7 +56,7 @@
                     <NuxtPage></NuxtPage>
                 </v-container>
             </v-main>
-            <v-navigation-drawer floating v-model="drawerRight" location="right" permanent>
+            <v-navigation-drawer v-model="drawerRight" location="right" permanent floating>
                 <v-list class="pa-0" lines="two">
                     <v-list-item @click="">
                         <v-list-item-header>
@@ -84,22 +84,16 @@ export default {
             drawerRight: false,
             navbar: [
                 {
-                    title: 'Home',
+                    title: 'Discover',
                     to: '/',
                     icon: 'mdi-home',
-                    color: 'orange'
+                    color: 'red'
                 },
                 {
                     title: 'Learn',
                     to: '/learn',
                     icon: 'mdi-graph',
-                    color: 'red'
-                },
-                {
-                    title: 'Tests',
-                    to: '/tests',
-                    icon: 'mdi-file-document',
-                    color: 'pink'
+                    color: 'orange'
                 },
                 {
                     title: 'Courses',
@@ -108,10 +102,22 @@ export default {
                     color: 'yellow'
                 },
                 {
+                    title: 'Books',
+                    to: '/books',
+                    icon: 'mdi-book-open-variant',
+                    color: 'light-green'
+                },
+                {
+                    title: 'Certifications',
+                    to: '/certifications',
+                    icon: 'mdi-file-document',
+                    color: 'green'
+                },
+                {
                     title: 'Tools',
                     to: '/tools',
                     icon: 'mdi-hammer-wrench',
-                    color: 'green'
+                    color: 'teal'
                 }
             ]
         }

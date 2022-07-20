@@ -4,7 +4,6 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   ssr: false,
   modules: [
-    '@intlify/nuxt3'
   ],
   css: [
     '@mdi/font/css/materialdesignicons.min.css',
